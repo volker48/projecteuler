@@ -1,13 +1,13 @@
-x = 999
-y = 999
-def is_palindrome(x):
-    string = str(x)
-    reversed = string[::-1]
-    return string == reversed
+def products(x, y):
+    for a in xrange(x, 99, -1):
+        for b in xrange(a, 99, -1):
+            yield a * b
 
-while x and y > 0:
-    product = x * y
+def is_palindrome(toCheck):
+    toCheck = str(toCheck)
+    reversed = toCheck[::-1]
+    return toCheck == reversed
+
+for product in products(999,999):
     if is_palindrome(product):
         print product
-        break
-

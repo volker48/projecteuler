@@ -16,4 +16,5 @@ count = 1
 for prime in sieve(10000000):
     if count == 10001:
         print prime
+        break
     count += 1
